@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23D0DBBECF4CD9A48588F578 /* Pods_The_Guardian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A3CF33A93F698CBAD1C52D /* Pods_The_Guardian.framework */; };
 		731DF06721D8EC7A00AE560A /* Marat Sans Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 731DF06621D8EC4800AE560A /* Marat Sans Black Italic.otf */; };
 		731DF06821D8EC7A00AE560A /* Marat Sans Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 731DF06021D8EC4700AE560A /* Marat Sans Black.otf */; };
 		731DF06921D8EC7A00AE560A /* Marat Sans Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 731DF06121D8EC4800AE560A /* Marat Sans Bold Italic.otf */; };
@@ -42,6 +43,7 @@
 		734EE95821D83ECC0030535D /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734EE95721D83ECC0030535D /* ArticleTableViewCell.swift */; };
 		734EE95F21D840BF0030535D /* TableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734EE95E21D840BF0030535D /* TableViewHandler.swift */; };
 		734EE96321D8450C0030535D /* ArticleCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734EE96221D8450C0030535D /* ArticleCellBuilder.swift */; };
+		737A193321D8FD7F00AAD103 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A193221D8FD7F00AAD103 /* UIImageViewExtension.swift */; };
 		73D2983021D8BE4D009E4925 /* CellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2982F21D8BE4D009E4925 /* CellBuilder.swift */; };
 		73D2983421D8BEDE009E4925 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983321D8BEDE009E4925 /* NSObjectExtension.swift */; };
 		73D2983721D8BF0C009E4925 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983621D8BF0C009E4925 /* OptionalExtension.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2741EE3540E3F2138E1DF69A /* Pods-The Guardian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Guardian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Guardian/Pods-The Guardian.debug.xcconfig"; sourceTree = "<group>"; };
+		69B8A56170E0BD31AF525EC7 /* Pods-The Guardian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Guardian.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Guardian/Pods-The Guardian.release.xcconfig"; sourceTree = "<group>"; };
 		731DF05521D8EC4700AE560A /* Marat Sans DemiBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marat Sans DemiBold Italic.otf"; sourceTree = "<group>"; };
 		731DF05621D8EC4700AE560A /* Marat Sans Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marat Sans Italic.otf"; sourceTree = "<group>"; };
 		731DF05721D8EC4700AE560A /* Marat Sans Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marat Sans Thin.otf"; sourceTree = "<group>"; };
@@ -88,12 +92,14 @@
 		734EE95721D83ECC0030535D /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		734EE95E21D840BF0030535D /* TableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHandler.swift; sourceTree = "<group>"; };
 		734EE96221D8450C0030535D /* ArticleCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellBuilder.swift; sourceTree = "<group>"; };
+		737A193221D8FD7F00AAD103 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		73D2982F21D8BE4D009E4925 /* CellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBuilder.swift; sourceTree = "<group>"; };
 		73D2983321D8BEDE009E4925 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		73D2983621D8BF0C009E4925 /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		73D2983821D8BF23009E4925 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		73D2983B21D8CBFB009E4925 /* ArticlesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesResponse.swift; sourceTree = "<group>"; };
 		73D2983D21D8CE87009E4925 /* ArticleFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFields.swift; sourceTree = "<group>"; };
+		A8A3CF33A93F698CBAD1C52D /* Pods_The_Guardian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Guardian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +107,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D0DBBECF4CD9A48588F578 /* Pods_The_Guardian.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7244F04B0E87D7D007102AE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2741EE3540E3F2138E1DF69A /* Pods-The Guardian.debug.xcconfig */,
+				69B8A56170E0BD31AF525EC7 /* Pods-The Guardian.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		731DF05421D8EC3600AE560A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +153,8 @@
 			children = (
 				734EE91F21D81BD20030535D /* The Guardian */,
 				734EE91E21D81BD20030535D /* Products */,
+				7244F04B0E87D7D007102AE5 /* Pods */,
+				8362291FA19D34F3C219629D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,8 +338,17 @@
 				73D2983621D8BF0C009E4925 /* OptionalExtension.swift */,
 				73D2983821D8BF23009E4925 /* UIViewControllerExtension.swift */,
 				731DF07921D8F4A100AE560A /* DateFormatterExtension.swift */,
+				737A193221D8FD7F00AAD103 /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8362291FA19D34F3C219629D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8A3CF33A93F698CBAD1C52D /* Pods_The_Guardian.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,9 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 734EE92F21D81BD30030535D /* Build configuration list for PBXNativeTarget "The Guardian" */;
 			buildPhases = (
+				42905478798481FAC8DCBC25 /* [CP] Check Pods Manifest.lock */,
 				734EE91921D81BD20030535D /* Sources */,
 				734EE91A21D81BD20030535D /* Frameworks */,
 				734EE91B21D81BD20030535D /* Resources */,
+				ED7276098EAEC8FB13E56214 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -408,6 +437,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42905478798481FAC8DCBC25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Guardian-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED7276098EAEC8FB13E56214 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		734EE91921D81BD20030535D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -421,6 +497,7 @@
 				73D2983921D8BF23009E4925 /* UIViewControllerExtension.swift in Sources */,
 				73D2983E21D8CE87009E4925 /* ArticleFields.swift in Sources */,
 				734EE93C21D81D900030535D /* Constants.swift in Sources */,
+				737A193321D8FD7F00AAD103 /* UIImageViewExtension.swift in Sources */,
 				73D2983721D8BF0C009E4925 /* OptionalExtension.swift in Sources */,
 				734EE95321D83DB70030535D /* ArticlesViewController.swift in Sources */,
 				73D2983C21D8CBFB009E4925 /* ArticlesResponse.swift in Sources */,
@@ -576,6 +653,7 @@
 		};
 		734EE93021D81BD30030535D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2741EE3540E3F2138E1DF69A /* Pods-The Guardian.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -594,6 +672,7 @@
 		};
 		734EE93121D81BD30030535D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69B8A56170E0BD31AF525EC7 /* Pods-The Guardian.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
