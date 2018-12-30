@@ -17,4 +17,23 @@ extension UIViewController {
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    var isNavigationBarTransparent: Bool {
+        get {
+            guard let navigationBar = navigationController?.navigationBar else { return false }
+            return navigationBar.shadowImage != UINavigationBar.appearance().shadowImage
+        }
+        
+        set(isTranslucent) {
+            guard let navigationBar = navigationController?.navigationBar else { return }
+            if isTranslucent {
+                navigationBar.setBackgroundImage(UIImage(), for: .default)
+                navigationBar.shadowImage = UIImage()
+            } else {
+                let backgroundImage = UINavigationBar.appearance().backgroundImage(for: UIBarMetrics.default)
+                navigationBar.setBackgroundImage(backgroundImage, for:.default)
+                navigationBar.shadowImage = UINavigationBar.appearance().shadowImage
+            }
+        }
+    }
 }

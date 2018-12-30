@@ -11,4 +11,5 @@ import UIKit
 protocol CellBuilder {
     associatedtype Data
     func configureCell(_ cell: inout UITableViewCell, data: Data)
+    func didSelectCell(at indexPath: IndexPath, data: Data?)
 }

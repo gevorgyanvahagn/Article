@@ -21,6 +21,14 @@ final class ArticlesViewController: UIViewController, APIClient {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // TODO: Move to seperate function
+        cellBuilder.didSelectCellAction = { [weak self] (indexPath, article) in
+            if let viewController = self?.storyboard?.instantiateViewController(withIdentifier: ArticleDetailsViewController.className) as? ArticleDetailsViewController {
+                viewController.article = article
+                self?.show(viewController, sender: nil)
+            }
+        }
         tableViewHandler = TableViewHandler(cellIdentifier: ArticleTableViewCell.className, tableView: tableView, cellBuilder: cellBuilder)
         fetchArticles()
     }

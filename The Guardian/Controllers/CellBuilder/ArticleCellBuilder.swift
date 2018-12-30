@@ -8,7 +8,15 @@
 
 import UIKit
 
-class ArticleCellBuilder: CellBuilder {
+final class ArticleCellBuilder: CellBuilder {
+    
+    typealias SelectAction = (IndexPath, ObjectArticle?) -> ()
+    var didSelectCellAction: SelectAction?
+    
+    func didSelectCell(at indexPath: IndexPath, data: ObjectArticle?) {
+        didSelectCellAction?(indexPath, data)
+    }
+    
     func configureCell(_ cell: inout UITableViewCell, data: ObjectArticle) {
         guard let cell = cell as? ArticleTableViewCell else { return }
         cell.sectionNameLabel.text = data.sectionName ?? ""
@@ -19,5 +27,21 @@ class ArticleCellBuilder: CellBuilder {
         } else {
             cell.thumbnailImageView.image = #imageLiteral(resourceName: "Placeholder")
         }
+        
+        if let date = data.createdDate {
+            cell.dateLabel.text = DateFormatter.shortFormatter.string(from: date)
+        } else {
+            cell.dateLabel.text = ""
+        }
+        let readingTime = calculateReadingTime(article: data)
+        cell.readingDurationLabel.text = "\(readingTime) min read"
+    }
+    
+    private func calculateReadingTime(article: ObjectArticle) -> Int {
+        guard let articleText = article.fields?.bodyText else {
+            return 0
+        }
+        
+        return Int(articleText.count / 500)
     }
 }

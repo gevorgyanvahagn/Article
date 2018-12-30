@@ -47,4 +47,12 @@ class TableViewHandler<Data, Builder: CellBuilder>: NSObject, UITableViewDataSou
         cellBuilder?.configureCell(&cell, data: dataSource[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard dataSource.indices.contains(indexPath.row) else {
+            assertionFailure("Index out of range")
+            return
+        }
+        cellBuilder?.didSelectCell(at: indexPath, data: dataSource[indexPath.row])
+    }
 }
