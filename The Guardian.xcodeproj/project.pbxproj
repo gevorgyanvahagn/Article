@@ -45,6 +45,12 @@
 		734EE96321D8450C0030535D /* ArticleCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734EE96221D8450C0030535D /* ArticleCellBuilder.swift */; };
 		737A193321D8FD7F00AAD103 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A193221D8FD7F00AAD103 /* UIImageViewExtension.swift */; };
 		737A193621D9549200AAD103 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A193521D9549200AAD103 /* ArticleDetailsViewController.swift */; };
+		737A193821D96E2C00AAD103 /* TagsCollectionViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A193721D96E2C00AAD103 /* TagsCollectionViewHandler.swift */; };
+		737A193B21D96E4F00AAD103 /* TagsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A193A21D96E4F00AAD103 /* TagsCollectionView.swift */; };
+		737A193D21D96FC100AAD103 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A193C21D96FC100AAD103 /* TriangleView.swift */; };
+		737A194021D9703F00AAD103 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A193F21D9703F00AAD103 /* TagCollectionViewCell.swift */; };
+		737A194221D973E000AAD103 /* UICollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A194121D973E000AAD103 /* UICollectionViewLayoutAttributes.swift */; };
+		737A194421D9740400AAD103 /* UICollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A194321D9740400AAD103 /* UICollectionViewLeftAlignedLayout.swift */; };
 		73D2983021D8BE4D009E4925 /* CellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2982F21D8BE4D009E4925 /* CellBuilder.swift */; };
 		73D2983421D8BEDE009E4925 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983321D8BEDE009E4925 /* NSObjectExtension.swift */; };
 		73D2983721D8BF0C009E4925 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983621D8BF0C009E4925 /* OptionalExtension.swift */; };
@@ -95,6 +101,12 @@
 		734EE96221D8450C0030535D /* ArticleCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellBuilder.swift; sourceTree = "<group>"; };
 		737A193221D8FD7F00AAD103 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		737A193521D9549200AAD103 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
+		737A193721D96E2C00AAD103 /* TagsCollectionViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewHandler.swift; sourceTree = "<group>"; };
+		737A193A21D96E4F00AAD103 /* TagsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionView.swift; sourceTree = "<group>"; };
+		737A193C21D96FC100AAD103 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		737A193F21D9703F00AAD103 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		737A194121D973E000AAD103 /* UICollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		737A194321D9740400AAD103 /* UICollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
 		73D2982F21D8BE4D009E4925 /* CellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBuilder.swift; sourceTree = "<group>"; };
 		73D2983321D8BEDE009E4925 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		73D2983621D8BF0C009E4925 /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
@@ -182,6 +194,8 @@
 		734EE93221D81BE50030535D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				737A193E21D9702200AAD103 /* CollectionViewCells */,
+				737A193921D96E4000AAD103 /* UIObjects */,
 				734EE95621D83EB40030535D /* TableViewCells */,
 				734EE93821D81C410030535D /* Storyboards */,
 			);
@@ -313,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				734EE95E21D840BF0030535D /* TableViewHandler.swift */,
+				737A193721D96E2C00AAD103 /* TagsCollectionViewHandler.swift */,
 			);
 			path = ViewHandlers;
 			sourceTree = "<group>";
@@ -334,6 +349,24 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		737A193921D96E4000AAD103 /* UIObjects */ = {
+			isa = PBXGroup;
+			children = (
+				737A193A21D96E4F00AAD103 /* TagsCollectionView.swift */,
+				737A193C21D96FC100AAD103 /* TriangleView.swift */,
+				737A194321D9740400AAD103 /* UICollectionViewLeftAlignedLayout.swift */,
+			);
+			path = UIObjects;
+			sourceTree = "<group>";
+		};
+		737A193E21D9702200AAD103 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				737A193F21D9703F00AAD103 /* TagCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		73D2982E21D8BE30009E4925 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +383,7 @@
 				73D2983821D8BF23009E4925 /* UIViewControllerExtension.swift */,
 				731DF07921D8F4A100AE560A /* DateFormatterExtension.swift */,
 				737A193221D8FD7F00AAD103 /* UIImageViewExtension.swift */,
+				737A194121D973E000AAD103 /* UICollectionViewLayoutAttributes.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -501,10 +535,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				734EE94821D821FA0030535D /* Endpoint.swift in Sources */,
+				737A193821D96E2C00AAD103 /* TagsCollectionViewHandler.swift in Sources */,
 				73D2983421D8BEDE009E4925 /* NSObjectExtension.swift in Sources */,
 				731DF07A21D8F4A100AE560A /* DateFormatterExtension.swift in Sources */,
 				734EE92121D81BD20030535D /* AppDelegate.swift in Sources */,
 				734EE95F21D840BF0030535D /* TableViewHandler.swift in Sources */,
+				737A194221D973E000AAD103 /* UICollectionViewLayoutAttributes.swift in Sources */,
 				73D2983921D8BF23009E4925 /* UIViewControllerExtension.swift in Sources */,
 				73D2983E21D8CE87009E4925 /* ArticleFields.swift in Sources */,
 				734EE93C21D81D900030535D /* Constants.swift in Sources */,
@@ -516,8 +552,12 @@
 				734EE96321D8450C0030535D /* ArticleCellBuilder.swift in Sources */,
 				737A193621D9549200AAD103 /* ArticleDetailsViewController.swift in Sources */,
 				734EE95121D824970030535D /* ArticlesEndpoint.swift in Sources */,
+				737A194021D9703F00AAD103 /* TagCollectionViewCell.swift in Sources */,
+				737A193B21D96E4F00AAD103 /* TagsCollectionView.swift in Sources */,
+				737A194421D9740400AAD103 /* UICollectionViewLeftAlignedLayout.swift in Sources */,
 				734EE95821D83ECC0030535D /* ArticleTableViewCell.swift in Sources */,
 				734EE94A21D822550030535D /* HTTPMethod.swift in Sources */,
+				737A193D21D96FC100AAD103 /* TriangleView.swift in Sources */,
 				734EE94D21D823C80030535D /* APIError.swift in Sources */,
 				734EE94021D81E350030535D /* APIClient.swift in Sources */,
 				734EE94421D81EBC0030535D /* Either.swift in Sources */,
