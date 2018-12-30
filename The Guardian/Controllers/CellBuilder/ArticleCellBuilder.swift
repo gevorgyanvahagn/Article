@@ -14,6 +14,10 @@ class ArticleCellBuilder: CellBuilder {
         cell.sectionNameLabel.text = data.sectionName ?? ""
         cell.titleLabel.text = data.webTitle ?? ""
         cell.firstLineText.text = data.fields?.bodyText ?? ""
-//        cell.thumbnailImageView.text = data.fields?.bodyText ?? ""
+        if let imageURL = data.fields?.thumbnail {
+            cell.thumbnailImageView.setImage(with: imageURL)
+        } else {
+            cell.thumbnailImageView.image = #imageLiteral(resourceName: "Placeholder")
+        }
     }
 }

@@ -69,12 +69,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="162.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TCU-Jn-v1f">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="TCU-Jn-v1f">
                                                     <rect key="frame" x="287" y="45" width="73" height="73"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="73" id="0sS-md-eby"/>
                                                         <constraint firstAttribute="height" constant="73" id="WJo-4F-uxy"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcH-ML-qMw">
                                                     <rect key="frame" x="18" y="22" width="244" height="16"/>
@@ -88,7 +93,7 @@
                                                     <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodby object oriented programming" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfI-SC-ypN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodby object oriented programming" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfI-SC-ypN">
                                                     <rect key="frame" x="18" y="44" width="244" height="45"/>
                                                     <fontDescription key="fontDescription" name="MaratSans-DemiBold" family="Marat Sans" pointSize="21"/>
                                                     <nil key="textColor"/>
@@ -118,6 +123,7 @@
                                             <constraints>
                                                 <constraint firstItem="TCU-Jn-v1f" firstAttribute="top" secondItem="1Nb-7X-HYb" secondAttribute="top" constant="45" id="4xo-Bn-b6I"/>
                                                 <constraint firstItem="ZfI-SC-ypN" firstAttribute="leading" secondItem="1Nb-7X-HYb" secondAttribute="leading" constant="18" id="7eN-wd-Qaf"/>
+                                                <constraint firstAttribute="bottom" secondItem="BH9-tx-F0Z" secondAttribute="bottom" constant="22.5" id="8pG-Oq-t9q"/>
                                                 <constraint firstItem="BH9-tx-F0Z" firstAttribute="leading" secondItem="1Nb-7X-HYb" secondAttribute="leading" constant="18" id="J63-ZU-tmS"/>
                                                 <constraint firstItem="TcH-ML-qMw" firstAttribute="width" secondItem="ZfI-SC-ypN" secondAttribute="width" id="O3X-j5-V0G"/>
                                                 <constraint firstItem="ZfI-SC-ypN" firstAttribute="top" secondItem="TcH-ML-qMw" secondAttribute="bottom" constant="6" id="O8o-lP-7BA"/>
@@ -129,7 +135,6 @@
                                                 <constraint firstItem="BH9-tx-F0Z" firstAttribute="top" secondItem="kWq-ky-WwP" secondAttribute="bottom" constant="12" id="hgz-Ts-B3N"/>
                                                 <constraint firstItem="TCU-Jn-v1f" firstAttribute="leading" secondItem="ZfI-SC-ypN" secondAttribute="trailing" constant="25" id="jgc-9O-85c"/>
                                                 <constraint firstItem="TcH-ML-qMw" firstAttribute="top" secondItem="1Nb-7X-HYb" secondAttribute="top" constant="22" id="n0A-gd-vmR"/>
-                                                <constraint firstAttribute="bottom" secondItem="TCU-Jn-v1f" secondAttribute="bottom" constant="44.5" id="sdT-O9-hao"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -181,4 +186,7 @@
             <point key="canvasLocation" x="-231.19999999999999" y="38.23088455772114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Placeholder" width="73" height="73"/>
+    </resources>
 </document>
