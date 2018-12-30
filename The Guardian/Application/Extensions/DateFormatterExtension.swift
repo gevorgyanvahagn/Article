@@ -13,4 +13,10 @@ extension DateFormatter {
         let dateFormatter = ISO8601DateFormatter()
         return dateFormatter
     }()
+    
+    static let shortFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        return dateFormatter
+    }()
 }

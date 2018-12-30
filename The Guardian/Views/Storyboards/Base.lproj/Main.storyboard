@@ -44,13 +44,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="inj-W6-jah"/>
                     </view>
-                    <navigationItem key="navigationItem" id="inZ-Vf-ZB5"/>
+                    <navigationItem key="navigationItem" id="inZ-Vf-ZB5">
+                        <barButtonItem key="backBarButtonItem" title=" " id="yaW-Hj-fMu"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhm-kx-Qxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="674" y="38"/>
         </scene>
-        <!--Articles View Controller-->
+        <!--Articles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ArticlesViewController" id="BYZ-38-t0r" customClass="ArticlesViewController" customModule="The_Guardian" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,6 +63,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ddl-xR-pwe">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="163" id="GK3-jc-Ye2" customClass="ArticleTableViewCell" customModule="The_Guardian" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="163"/>
@@ -82,19 +85,19 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcH-ML-qMw">
-                                                    <rect key="frame" x="18" y="22" width="244" height="16"/>
+                                                    <rect key="frame" x="18" y="22" width="259" height="16"/>
                                                     <fontDescription key="fontDescription" name="MaratSans-Thin" family="Marat Sans" pointSize="15"/>
                                                     <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I’ve been programming in Object for last 5 years, but now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWq-ky-WwP">
-                                                    <rect key="frame" x="18" y="95" width="244" height="16"/>
+                                                    <rect key="frame" x="18" y="95" width="259" height="16"/>
                                                     <fontDescription key="fontDescription" name="MaratSans-Light" family="Marat Sans" pointSize="15"/>
                                                     <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodby object oriented programming" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfI-SC-ypN">
-                                                    <rect key="frame" x="18" y="44" width="244" height="45"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodby object oriented programming" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfI-SC-ypN">
+                                                    <rect key="frame" x="18" y="44" width="259" height="45"/>
                                                     <fontDescription key="fontDescription" name="MaratSans-DemiBold" family="Marat Sans" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -127,13 +130,13 @@
                                                 <constraint firstItem="BH9-tx-F0Z" firstAttribute="leading" secondItem="1Nb-7X-HYb" secondAttribute="leading" constant="18" id="J63-ZU-tmS"/>
                                                 <constraint firstItem="TcH-ML-qMw" firstAttribute="width" secondItem="ZfI-SC-ypN" secondAttribute="width" id="O3X-j5-V0G"/>
                                                 <constraint firstItem="ZfI-SC-ypN" firstAttribute="top" secondItem="TcH-ML-qMw" secondAttribute="bottom" constant="6" id="O8o-lP-7BA"/>
-                                                <constraint firstItem="TCU-Jn-v1f" firstAttribute="leading" secondItem="kWq-ky-WwP" secondAttribute="trailing" constant="25" id="PgN-VE-dNI"/>
+                                                <constraint firstItem="TCU-Jn-v1f" firstAttribute="leading" secondItem="kWq-ky-WwP" secondAttribute="trailing" constant="10" id="PgN-VE-dNI"/>
                                                 <constraint firstItem="kWq-ky-WwP" firstAttribute="top" secondItem="ZfI-SC-ypN" secondAttribute="bottom" constant="6" id="QHy-Ik-OK5"/>
                                                 <constraint firstItem="kWq-ky-WwP" firstAttribute="leading" secondItem="1Nb-7X-HYb" secondAttribute="leading" constant="18" id="R5n-SR-MES"/>
                                                 <constraint firstAttribute="trailing" secondItem="TCU-Jn-v1f" secondAttribute="trailing" constant="15" id="eev-va-A7L"/>
                                                 <constraint firstItem="TcH-ML-qMw" firstAttribute="leading" secondItem="1Nb-7X-HYb" secondAttribute="leading" constant="18" id="fYg-RK-R0E"/>
                                                 <constraint firstItem="BH9-tx-F0Z" firstAttribute="top" secondItem="kWq-ky-WwP" secondAttribute="bottom" constant="12" id="hgz-Ts-B3N"/>
-                                                <constraint firstItem="TCU-Jn-v1f" firstAttribute="leading" secondItem="ZfI-SC-ypN" secondAttribute="trailing" constant="25" id="jgc-9O-85c"/>
+                                                <constraint firstItem="TCU-Jn-v1f" firstAttribute="leading" secondItem="ZfI-SC-ypN" secondAttribute="trailing" constant="10" id="jgc-9O-85c"/>
                                                 <constraint firstItem="TcH-ML-qMw" firstAttribute="top" secondItem="1Nb-7X-HYb" secondAttribute="top" constant="22" id="n0A-gd-vmR"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -158,9 +161,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fHG-h1-Lgy"/>
+                    <navigationItem key="navigationItem" title="Articles" id="fHG-h1-Lgy"/>
                     <connections>
                         <outlet property="tableView" destination="ddl-xR-pwe" id="tnQ-4w-aTf"/>
+                        <segue destination="OxI-OZ-aC5" kind="show" identifier="showArticleDetailsViewController" id="nWG-Jd-SVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -175,6 +179,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="4k3-Hu-Zzx">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MaratSans-Medium" family="Marat Sans" pointSize="20"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="MaratSans-Regular" family="Marat Sans" pointSize="35"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -184,6 +195,123 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruI-N0-aa9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-231.19999999999999" y="38.23088455772114"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="gbU-cT-bfW">
+            <objects>
+                <viewController storyboardIdentifier="ArticleDetailsViewController" id="OxI-OZ-aC5" userLabel="Sign Up View Controller" customClass="ArticleDetailsViewController" customModule="The_Guardian" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xVP-T0-Wlw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="nng-rS-TaP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQJ-h7-pOi">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODJ-hj-vae">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="bdl-VD-8CK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHd-y0-NFu" customClass="TriangleView" customModule="The_Guardian" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="330" width="375" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Id9-zb-UnZ"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ky-WJ-Ymd">
+                                                <rect key="frame" x="18" y="374" width="187.5" height="16"/>
+                                                <fontDescription key="fontDescription" name="MaratSans-Thin" family="Marat Sans" pointSize="15"/>
+                                                <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goodby object oriented programming" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCv-Vg-k9q">
+                                                <rect key="frame" x="18" y="396" width="339" height="49"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="r2p-xO-JkD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MaratSans-DemiBold" family="Marat Sans" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="KGu-YZ-yuX">
+                                                <rect key="frame" x="18" y="451" width="162" height="17"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 23, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3Z-cp-xM2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="17"/>
+                                                        <fontDescription key="fontDescription" name="MaratSans-Light" family="Marat Sans" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOc-5h-9Ha">
+                                                        <rect key="frame" x="79.5" y="0.0" width="4.5" height="17"/>
+                                                        <fontDescription key="fontDescription" name="MaratSans-Light" family="Marat Sans" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 min read" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c6-9I-RtO">
+                                                        <rect key="frame" x="91" y="0.0" width="71" height="17"/>
+                                                        <fontDescription key="fontDescription" name="MaratSans-Light" family="Marat Sans" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8ky-WJ-Ymd" secondAttribute="trailing" constant="18" id="5lQ-Bh-Pih"/>
+                                            <constraint firstItem="ODJ-hj-vae" firstAttribute="leading" secondItem="pQJ-h7-pOi" secondAttribute="leading" id="Fac-59-cVU"/>
+                                            <constraint firstItem="QHd-y0-NFu" firstAttribute="bottom" secondItem="ODJ-hj-vae" secondAttribute="bottom" id="Io3-ex-AQb"/>
+                                            <constraint firstItem="QHd-y0-NFu" firstAttribute="trailing" secondItem="ODJ-hj-vae" secondAttribute="trailing" id="K5l-MG-mgE"/>
+                                            <constraint firstItem="KGu-YZ-yuX" firstAttribute="leading" secondItem="pQJ-h7-pOi" secondAttribute="leading" constant="18" id="KQg-06-Jeg"/>
+                                            <constraint firstItem="KGu-YZ-yuX" firstAttribute="top" secondItem="PCv-Vg-k9q" secondAttribute="bottom" constant="6" id="N0D-mj-LcF"/>
+                                            <constraint firstItem="8ky-WJ-Ymd" firstAttribute="leading" secondItem="pQJ-h7-pOi" secondAttribute="leading" constant="18" id="OiO-kl-weA"/>
+                                            <constraint firstItem="8ky-WJ-Ymd" firstAttribute="width" secondItem="QHd-y0-NFu" secondAttribute="width" multiplier="0.5" id="PIB-Vh-Goj"/>
+                                            <constraint firstAttribute="trailing" secondItem="PCv-Vg-k9q" secondAttribute="trailing" constant="18" id="UvT-w3-FUU"/>
+                                            <constraint firstItem="PCv-Vg-k9q" firstAttribute="leading" secondItem="pQJ-h7-pOi" secondAttribute="leading" constant="18" id="WkR-gf-Szr"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KGu-YZ-yuX" secondAttribute="trailing" constant="18" id="YkG-k6-h0Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="PCv-Vg-k9q" secondAttribute="bottom" constant="555" id="bFd-bI-3X7"/>
+                                            <constraint firstItem="ODJ-hj-vae" firstAttribute="top" secondItem="pQJ-h7-pOi" secondAttribute="top" id="cqd-hX-lBX"/>
+                                            <constraint firstItem="QHd-y0-NFu" firstAttribute="leading" secondItem="ODJ-hj-vae" secondAttribute="leading" id="dVa-3T-Z4x"/>
+                                            <constraint firstItem="PCv-Vg-k9q" firstAttribute="top" secondItem="8ky-WJ-Ymd" secondAttribute="bottom" constant="6" id="hyO-DW-3Wd"/>
+                                            <constraint firstAttribute="trailing" secondItem="ODJ-hj-vae" secondAttribute="trailing" id="iVk-Jw-yno"/>
+                                            <constraint firstItem="KGu-YZ-yuX" firstAttribute="top" secondItem="PCv-Vg-k9q" secondAttribute="bottom" constant="6" id="o48-IX-obc"/>
+                                            <constraint firstItem="8ky-WJ-Ymd" firstAttribute="bottom" secondItem="QHd-y0-NFu" secondAttribute="bottom" constant="-10" id="v2I-PH-yCl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pQJ-h7-pOi" firstAttribute="centerX" secondItem="nng-rS-TaP" secondAttribute="centerX" id="5YK-4d-K6R"/>
+                                    <constraint firstAttribute="bottom" secondItem="pQJ-h7-pOi" secondAttribute="bottom" id="84m-0D-XEj"/>
+                                    <constraint firstAttribute="width" secondItem="pQJ-h7-pOi" secondAttribute="width" id="MGE-6T-E9M"/>
+                                    <constraint firstItem="pQJ-h7-pOi" firstAttribute="leading" secondItem="nng-rS-TaP" secondAttribute="leading" id="NT7-t0-cVO"/>
+                                    <constraint firstItem="pQJ-h7-pOi" firstAttribute="top" secondItem="nng-rS-TaP" secondAttribute="top" id="VhW-7X-yhF"/>
+                                    <constraint firstAttribute="trailing" secondItem="pQJ-h7-pOi" secondAttribute="trailing" id="nQm-iT-MDH"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nng-rS-TaP" firstAttribute="top" secondItem="xVP-T0-Wlw" secondAttribute="top" id="Huj-ZX-gH4"/>
+                            <constraint firstItem="nng-rS-TaP" firstAttribute="leading" secondItem="muq-F3-Hdc" secondAttribute="leading" id="Ihx-Iq-hRb"/>
+                            <constraint firstItem="nng-rS-TaP" firstAttribute="trailing" secondItem="muq-F3-Hdc" secondAttribute="trailing" id="eJb-NU-xps"/>
+                            <constraint firstItem="nng-rS-TaP" firstAttribute="bottom" secondItem="muq-F3-Hdc" secondAttribute="bottom" id="eqK-ZG-Pr9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="muq-F3-Hdc"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="oQp-yW-LDi"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="sectionNameLabel" destination="8ky-WJ-Ymd" id="K5D-tu-cmp"/>
+                        <outlet property="thumbnailImageView" destination="ODJ-hj-vae" id="br6-U7-v8m"/>
+                        <outlet property="titleLabel" destination="PCv-Vg-k9q" id="mkb-DZ-J5P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYY-ad-sFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2378" y="38"/>
         </scene>
     </scenes>
     <resources>
