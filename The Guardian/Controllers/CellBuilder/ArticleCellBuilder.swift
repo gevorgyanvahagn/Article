@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ArticleCellBuilder: CellBuilder {
+final class ArticleCellBuilder: RowBuilder {
     
     typealias SelectAction = (IndexPath, ObjectArticle?) -> ()
     var didSelectCellAction: SelectAction?
