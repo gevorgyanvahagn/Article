@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewHandler<Data, Builder: CellBuilder>: NSObject, UITableViewDataSource, UITableViewDelegate where Builder.Data == Data {
+class TableViewHandler<Data, Builder: RowBuilder>: NSObject, UITableViewDataSource, UITableViewDelegate where Builder.Data == Data {
     
     weak var tableView: UITableView?
     var cellIdentifier: String
