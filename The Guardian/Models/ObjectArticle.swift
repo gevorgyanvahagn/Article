@@ -61,39 +61,11 @@ class ObjectArticle: Codable {
         
         wordsSet.forEach() { (word) in
             
-            let count = self.matchesCount(word, in: articleText)
+            let count = articleText.matchesCount(of: word)
             if count >= 10 {
                 frequentWords.insert(word)
             }
         }
         return Array(frequentWords)
     }()
-    
-    // TODO: - Move to extension
-    func matchesCount(_ searchString: String, in text: String) -> Int {
-        
-        do {
-            let regex = try NSRegularExpression(pattern: "(?<=\\b)\(searchString)(?=\\b)", options: .caseInsensitive)
-            
-            let matches = regex.matches(in: text, options: NSRegularExpression.MatchingOptions.reportProgress , range: NSRange(location: 0, length: text.utf16.count)) as [NSTextCheckingResult]
-            return matches.count
-        } catch {
-            return 0
-        }
-    }
-}
-
-// TODO: Move to folders
-extension String {
-    var words: [String] {
-        return components(separatedBy: .punctuationCharacters)
-            .joined()
-            .components(separatedBy: .whitespaces)
-            .filter{!$0.isEmpty}
-    }
-}
-
-struct HashableWord: Hashable, Equatable {
-    var text: String
-    var count: Int
 }

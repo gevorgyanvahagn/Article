@@ -57,34 +57,3 @@ final class ArticlesViewController: UIViewController, APIClient {
         print("ArticlesViewController deinit")
     }
 }
-
-final class ArticlesLoader: APIClient {
-    typealias ErrorAction = (Error) -> ()
-    var showError: ErrorAction?
-    private var currentPage = 1
-    private var totalPages = 1
-    
-    func fetchArticles(completion:@escaping ([ObjectArticle]) -> ()) {
-        print("fetchArticles")
-        if let endPoint = ArticlesEndpoint.search(page: currentPage).request {
-            request(with: endPoint) { [weak self] (either: Either<ArticlesResponse>) in
-                switch either {
-                case .success(let articlesResponse):
-                    self?.totalPages = articlesResponse.pages ?? 1
-                    self?.currentPage = articlesResponse.currentPage ?? 1
-                    if let articles = articlesResponse.articles {
-                        completion(articles)
-                    }
-                case .error(let error):
-                    completion([])
-                    self?.showError?(error)
-                }
-            }
-        }
-    }
-    
-    func canLoadMore() -> Bool {
-        print("<#T##items: Any...##Any#>")
-        return currentPage < totalPages
-    }
-}

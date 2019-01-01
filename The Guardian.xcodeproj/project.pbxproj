@@ -55,6 +55,7 @@
 		73A2431721DA6B55001D1104 /* TagCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431621DA6B55001D1104 /* TagCellBuilder.swift */; };
 		73A2431921DA8FB6001D1104 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431821DA8FB6001D1104 /* UILabelExtension.swift */; };
 		73A2431B21DADD22001D1104 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431A21DADD22001D1104 /* StringExtension.swift */; };
+		73A2431E21DBF679001D1104 /* ArticlesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431D21DBF679001D1104 /* ArticlesLoader.swift */; };
 		73D2983021D8BE4D009E4925 /* RowBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2982F21D8BE4D009E4925 /* RowBuilder.swift */; };
 		73D2983421D8BEDE009E4925 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983321D8BEDE009E4925 /* NSObjectExtension.swift */; };
 		73D2983721D8BF0C009E4925 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983621D8BF0C009E4925 /* OptionalExtension.swift */; };
@@ -115,6 +116,7 @@
 		73A2431621DA6B55001D1104 /* TagCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCellBuilder.swift; sourceTree = "<group>"; };
 		73A2431821DA8FB6001D1104 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		73A2431A21DADD22001D1104 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		73A2431D21DBF679001D1104 /* ArticlesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesLoader.swift; sourceTree = "<group>"; };
 		73D2982F21D8BE4D009E4925 /* RowBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowBuilder.swift; sourceTree = "<group>"; };
 		73D2983321D8BEDE009E4925 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		73D2983621D8BF0C009E4925 /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
@@ -233,11 +235,11 @@
 		734EE93521D81C020030535D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				73A2431C21DBF667001D1104 /* DataManagers */,
 				73D2983121D8BEC9009E4925 /* Extensions */,
 				73D2982E21D8BE30009E4925 /* Protocols */,
 				734EE94121D81E4B0030535D /* Enumirations */,
 				734EE93E21D81DE70030535D /* Networking */,
-				734EE93D21D81DE10030535D /* Services */,
 				734EE93921D81C580030535D /* Shared Files */,
 				734EE93721D81C340030535D /* Settings */,
 				734EE93621D81C2C0030535D /* Resources */,
@@ -278,13 +280,6 @@
 				734EE93B21D81D900030535D /* Constants.swift */,
 			);
 			path = "Shared Files";
-			sourceTree = "<group>";
-		};
-		734EE93D21D81DE10030535D /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		734EE93E21D81DE70030535D /* Networking */ = {
@@ -374,6 +369,14 @@
 				737A193F21D9703F00AAD103 /* TagCollectionViewCell.swift */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		73A2431C21DBF667001D1104 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				73A2431D21DBF679001D1104 /* ArticlesLoader.swift */,
+			);
+			path = DataManagers;
 			sourceTree = "<group>";
 		};
 		73D2982E21D8BE30009E4925 /* Protocols */ = {
@@ -551,6 +554,7 @@
 				73D2983421D8BEDE009E4925 /* NSObjectExtension.swift in Sources */,
 				731DF07A21D8F4A100AE560A /* DateFormatterExtension.swift in Sources */,
 				73A2431B21DADD22001D1104 /* StringExtension.swift in Sources */,
+				73A2431E21DBF679001D1104 /* ArticlesLoader.swift in Sources */,
 				734EE92121D81BD20030535D /* AppDelegate.swift in Sources */,
 				73A2431521DA5640001D1104 /* CellBuilder.swift in Sources */,
 				734EE95F21D840BF0030535D /* TableViewHandler.swift in Sources */,
