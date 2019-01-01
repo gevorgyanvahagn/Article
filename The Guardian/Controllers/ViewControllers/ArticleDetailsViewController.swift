@@ -16,19 +16,20 @@ final class ArticleDetailsViewController: UIViewController {
     @IBOutlet weak var tagsCollectionView: TagsCollectionView!
     @IBOutlet weak var wordsCollectionView: TagsCollectionView!
     
+    @IBOutlet weak var bottomSectionNameLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var readingDurationLabel: UILabel!
+    @IBOutlet weak var bottomImageView: UIImageView!
     @IBOutlet weak var sectionNameLabel: UILabel!
     @IBOutlet weak var articleTextLabel: UILabel!
+    @IBOutlet weak var bottomDateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    
-    var words = ["Please", "read", "this", "library", "link", "giving", "below", "it", "has", "awesome", "and", "custom", "tag", "design", "all", "the", "things", "you", "required", "for", "your", "design."]
+    @IBOutlet weak var dateLabel: UILabel!
     
     var article: ObjectArticle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        isNavigationBarTransparent = true
-        navigationController?.hidesBarsOnSwipe = true
         loadArticle()
         configureSearchCollection()
     }
@@ -44,7 +45,7 @@ final class ArticleDetailsViewController: UIViewController {
     }
     
     private func configureSearchCollection() {
-        guard var article = article else {
+        guard let article = article else {
             assertionFailure()
             return
         }
@@ -56,7 +57,7 @@ final class ArticleDetailsViewController: UIViewController {
         wordsCollectionView.allowsSelection = true
         
         tagsCollectionViewHandler = CollectionViewHandler(collectionView: tagsCollectionView, cellBuilder: TagCellBuilder())
-        tagsCollectionViewHandler?.dataSource = words
+        tagsCollectionViewHandler?.dataSource = article.tags
         
         let wordsCellBuilder = TagCellBuilder()
         wordsCellBuilder.didSelectCellAction = { [weak self] (index, word) in
@@ -68,7 +69,7 @@ final class ArticleDetailsViewController: UIViewController {
         }
         wordsCollectionViewHandler = CollectionViewHandler(collectionView: wordsCollectionView, cellBuilder: wordsCellBuilder)
         print("1", Date())
-
+        
         DispatchQueue.global(qos: .background).async {
             let words = article.frequentWords
             DispatchQueue.main.async {
@@ -84,13 +85,28 @@ final class ArticleDetailsViewController: UIViewController {
             return
         }
         
+        sectionNameLabel.text = article.sectionName ?? ""
+        bottomSectionNameLabel.text = article.sectionName ?? ""
+        
+        navigationItem.title = article.sectionName ?? ""
+        titleLabel.text = article.webTitle ?? ""
+        
         if let imageURL = article.fields?.thumbnail {
             thumbnailImageView.setImage(with: imageURL)
+            bottomImageView.setImage(with: imageURL)
         }
         
-        if let articleText = article.fields?.bodyText {
-            articleTextLabel.text = articleText
+        articleTextLabel.text = article.fields?.bodyText ?? ""
+        if let date = article.createdDate {
+            bottomDateLabel.text = DateFormatter.shortFormatter.string(from: date)
+            dateLabel.text = DateFormatter.shortFormatter.string(from: date)
+        } else {
+            bottomDateLabel.text = ""
+            dateLabel.text = ""
         }
+        
+        let readingTime = article.fields?.bodyText?.readingDuration ?? 0
+        readingDurationLabel.text = "\(readingTime) min read"
     }
     
     private func highlight(word: String) {

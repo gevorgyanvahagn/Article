@@ -42,20 +42,26 @@ class ObjectArticle: Codable {
             createdDate = nil
         }
     }
-
+    
+    lazy var tags: [String] = {
+        if let tags = webTitle?.words.shuffled() {
+            return tags
+        }
+        return []
+    }()
     
     lazy var frequentWords: [String] = {
         guard let articleText = fields?.bodyText else {
             return []
         }
         
-        let words = articleText.components(separatedBy: .whitespacesAndNewlines)
-        let wordsSet = Set(words)
+        let words = articleText.words
+        let wordsSet = Set(words.map({ $0.lowercased() }))
         var frequentWords = Set<String>()
         
         wordsSet.forEach() { (word) in
             
-            let count = self.matchesCount(in: articleText, searchString: word)
+            let count = self.matchesCount(word, in: articleText)
             if count >= 10 {
                 frequentWords.insert(word)
             }
@@ -63,17 +69,27 @@ class ObjectArticle: Codable {
         return Array(frequentWords)
     }()
     
-    func matchesCount(in text: String, searchString: String) -> Int {
+    // TODO: - Move to extension
+    func matchesCount(_ searchString: String, in text: String) -> Int {
         
         do {
             let regex = try NSRegularExpression(pattern: "(?<=\\b)\(searchString)(?=\\b)", options: .caseInsensitive)
             
             let matches = regex.matches(in: text, options: NSRegularExpression.MatchingOptions.reportProgress , range: NSRange(location: 0, length: text.utf16.count)) as [NSTextCheckingResult]
             return matches.count
-        } catch let error {
-            
+        } catch {
             return 0
         }
+    }
+}
+
+// TODO: Move to folders
+extension String {
+    var words: [String] {
+        return components(separatedBy: .punctuationCharacters)
+            .joined()
+            .components(separatedBy: .whitespaces)
+            .filter{!$0.isEmpty}
     }
 }
 
