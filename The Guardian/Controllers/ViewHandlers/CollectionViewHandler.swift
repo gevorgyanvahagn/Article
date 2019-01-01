@@ -37,6 +37,10 @@ class CollectionViewHandler<Data, Builder: CellBuilder>: NSObject, UICollectionV
         collectionView?.dataSource = self
     }
     
+    func deselect(at indexPath: IndexPath) {
+        collectionView?.deselectItem(at: indexPath, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
     }
