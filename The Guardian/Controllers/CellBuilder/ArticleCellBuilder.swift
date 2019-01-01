@@ -33,15 +33,7 @@ final class ArticleCellBuilder: RowBuilder {
         } else {
             cell.dateLabel.text = ""
         }
-        let readingTime = calculateReadingTime(article: data)
+        let readingTime = data.fields?.bodyText?.readingDuration ?? 0
         cell.readingDurationLabel.text = "\(readingTime) min read"
-    }
-    
-    private func calculateReadingTime(article: ObjectArticle) -> Int {
-        guard let articleText = article.fields?.bodyText else {
-            return 0
-        }
-        
-        return Int(articleText.count / 500)
     }
 }

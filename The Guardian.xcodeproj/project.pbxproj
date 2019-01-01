@@ -54,6 +54,7 @@
 		73A2431521DA5640001D1104 /* CellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431421DA5640001D1104 /* CellBuilder.swift */; };
 		73A2431721DA6B55001D1104 /* TagCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431621DA6B55001D1104 /* TagCellBuilder.swift */; };
 		73A2431921DA8FB6001D1104 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431821DA8FB6001D1104 /* UILabelExtension.swift */; };
+		73A2431B21DADD22001D1104 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431A21DADD22001D1104 /* StringExtension.swift */; };
 		73D2983021D8BE4D009E4925 /* RowBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2982F21D8BE4D009E4925 /* RowBuilder.swift */; };
 		73D2983421D8BEDE009E4925 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983321D8BEDE009E4925 /* NSObjectExtension.swift */; };
 		73D2983721D8BF0C009E4925 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983621D8BF0C009E4925 /* OptionalExtension.swift */; };
@@ -113,6 +114,7 @@
 		73A2431421DA5640001D1104 /* CellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBuilder.swift; sourceTree = "<group>"; };
 		73A2431621DA6B55001D1104 /* TagCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCellBuilder.swift; sourceTree = "<group>"; };
 		73A2431821DA8FB6001D1104 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		73A2431A21DADD22001D1104 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		73D2982F21D8BE4D009E4925 /* RowBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowBuilder.swift; sourceTree = "<group>"; };
 		73D2983321D8BEDE009E4925 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		73D2983621D8BF0C009E4925 /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				737A193221D8FD7F00AAD103 /* UIImageViewExtension.swift */,
 				737A194121D973E000AAD103 /* UICollectionViewLayoutAttributes.swift */,
 				73A2431821DA8FB6001D1104 /* UILabelExtension.swift */,
+				73A2431A21DADD22001D1104 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				737A193821D96E2C00AAD103 /* CollectionViewHandler.swift in Sources */,
 				73D2983421D8BEDE009E4925 /* NSObjectExtension.swift in Sources */,
 				731DF07A21D8F4A100AE560A /* DateFormatterExtension.swift in Sources */,
+				73A2431B21DADD22001D1104 /* StringExtension.swift in Sources */,
 				734EE92121D81BD20030535D /* AppDelegate.swift in Sources */,
 				73A2431521DA5640001D1104 /* CellBuilder.swift in Sources */,
 				734EE95F21D840BF0030535D /* TableViewHandler.swift in Sources */,
@@ -727,7 +731,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "lightstudio.The-Guardian";
+				PRODUCT_BUNDLE_IDENTIFIER = lightstudio.article;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -746,7 +750,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "lightstudio.The-Guardian";
+				PRODUCT_BUNDLE_IDENTIFIER = lightstudio.article;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -10,6 +10,9 @@ import UIKit
 
 class TableViewHandler<Data, Builder: RowBuilder>: NSObject, UITableViewDataSource, UITableViewDelegate where Builder.Data == Data {
     
+    typealias ShowCellAction = (IndexPath) -> ()
+    var willShowCell: ShowCellAction?
+    
     weak var tableView: UITableView?
     var cellIdentifier: String
     var dataSource: [Data] =  [] {
@@ -54,5 +57,9 @@ class TableViewHandler<Data, Builder: RowBuilder>: NSObject, UITableViewDataSour
             return
         }
         cellBuilder?.didSelectCell(at: indexPath, data: dataSource[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        willShowCell?(indexPath)
     }
 }

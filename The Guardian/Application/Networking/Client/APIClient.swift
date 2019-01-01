@@ -32,12 +32,6 @@ extension APIClient {
                 return
             }
             
-            // TODO: - for test only, remove before sending
-            if let data = data {
-                let json = try? JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-            }
-            
             guard let response = response as? HTTPURLResponse, 200..<300 ~= response.statusCode else {
                 
                 DispatchQueue.main.async {
