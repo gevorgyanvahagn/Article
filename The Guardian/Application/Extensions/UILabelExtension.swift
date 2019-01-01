@@ -10,8 +10,12 @@ import UIKit
 
 extension UILabel {
     
-    func attributedString(in text: String, changedString: String, atributes: [NSAttributedString.Key : Any]) {
+    func attributedString(in text: String, changedString: String?, atributes: [NSAttributedString.Key : Any]) {
         let attributedText = NSMutableAttributedString(string: text)
+        guard let changedString = changedString else {
+            self.attributedText = attributedText
+            return
+        }
         
         do {
             let regex = try NSRegularExpression(pattern: "(?<=\\b)\(changedString)(?=\\b)", options: .caseInsensitive)

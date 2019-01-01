@@ -26,6 +26,7 @@ final class ArticleDetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var highlitedWord: String?
     var article: ObjectArticle?
     
     override func viewDidLoad() {
@@ -65,7 +66,13 @@ final class ArticleDetailsViewController: UIViewController {
                 assertionFailure()
                 return
             }
-            self?.highlight(word: word)
+            
+            if word == self?.highlitedWord {
+                self?.highlight(word: nil)
+                self?.wordsCollectionViewHandler?.deselect(at: index)
+            } else {
+                self?.highlight(word: word)
+            }
         }
         wordsCollectionViewHandler = CollectionViewHandler(collectionView: wordsCollectionView, cellBuilder: wordsCellBuilder)
         print("1", Date())
@@ -109,12 +116,12 @@ final class ArticleDetailsViewController: UIViewController {
         readingDurationLabel.text = "\(readingTime) min read"
     }
     
-    private func highlight(word: String) {
+    private func highlight(word: String?) {
         guard let articleText = article?.fields?.bodyText else {
             assertionFailure()
             return
         }
+        highlitedWord = word
         articleTextLabel.attributedString(in: articleText, changedString: word, atributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: .heavy)])
-        
     }
 }
