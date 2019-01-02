@@ -23,6 +23,7 @@ final class ArticlesViewController: UIViewController, APIClient {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        extendedLayoutIncludesOpaqueBars = true
         configureTableView()
         articlesLoader.showError = { [weak self] (error) in
             self?.alert(title: error.localizedDescription)

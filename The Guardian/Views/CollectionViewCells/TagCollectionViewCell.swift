@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TagCollectionViewCell: UICollectionViewCell {
+final class TagCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     
