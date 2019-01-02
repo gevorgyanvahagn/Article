@@ -22,13 +22,17 @@ extension APIClient {
     func request<T: Decodable>(with request: URLRequest?, completion: @escaping (Either<T>) -> Void) {
         
         guard let request = request else {
-            completion(.error(APIError.badRequest))
+            DispatchQueue.main.async {
+                completion(.error(APIError.badRequest))
+            }
             return
         }
         
         let task = session.dataTask(with: request) { (data, response, error) in
             if let error = error {
-                completion(.error(error))
+                DispatchQueue.main.async {
+                    completion(.error(error))
+                }
                 return
             }
             
@@ -50,7 +54,9 @@ extension APIClient {
                     completion(.success(value))
                 }
             } catch let error {
-                completion(.error(error))
+                DispatchQueue.main.async {
+                    completion(.error(error))
+                }
             }
         }
         task.resume()

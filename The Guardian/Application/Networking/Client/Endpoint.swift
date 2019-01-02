@@ -41,12 +41,6 @@ extension Endpoint {
         return component.query?.data(using: .utf8)
     }
     
-    func addHeaders(request: inout URLRequest) {
-//        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-//        
-//        request.addValue("5vdh8qyybuUPuc64c6pP9LyIJ84subMFqjSswomP", forHTTPHeaderField: "X-API-KEY")
-    }
-    
     var request: URLRequest? {
         guard let url = urlComponents?.url else {
             return nil
@@ -54,8 +48,6 @@ extension Endpoint {
         
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
-        
-        addHeaders(request: &request)
         request.httpBody = httpBody
         
         return request

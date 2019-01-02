@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ObjectArticle: Codable {
+final class ObjectArticle: Codable {
     let id: String?
     let sectionID: String?
     let sectionName: String?

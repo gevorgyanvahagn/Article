@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TagsCollectionView: UICollectionView {
+final class TagsCollectionView: UICollectionView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

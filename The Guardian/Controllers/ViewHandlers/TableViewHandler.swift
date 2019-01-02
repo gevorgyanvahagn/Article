@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewHandler<Data, Builder: RowBuilder>: NSObject, UITableViewDataSource, UITableViewDelegate where Builder.Data == Data {
+final class TableViewHandler<Data, Builder: RowBuilder>: NSObject, UITableViewDataSource, UITableViewDelegate where Builder.Data == Data {
     
     typealias ShowCellAction = (IndexPath) -> ()
     var willShowCell: ShowCellAction?

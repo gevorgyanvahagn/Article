@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewHandler<Data, Builder: CellBuilder>: NSObject, UICollectionViewDataSource, UICollectionViewDelegate where Builder.Data == Data {
+final class CollectionViewHandler<Data, Builder: CellBuilder>: NSObject, UICollectionViewDataSource, UICollectionViewDelegate where Builder.Data == Data {
     
     weak var collectionView: UICollectionView?
     var cellIdentifier: String
