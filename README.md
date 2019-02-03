@@ -1,4 +1,10 @@
-# Article iOS App 
+# Article iOS App
+
+## Screenshots
+
+<img width="545" alt="screen shot 2019-02-03 at 5 03 55 pm" src="https://user-images.githubusercontent.com/43815766/52177177-acf91380-27d6-11e9-971f-75732df5643f.png">
+<img width="501" alt="screen shot 2019-02-03 at 5 04 25 pm" src="https://user-images.githubusercontent.com/43815766/52177178-acf91380-27d6-11e9-8fc7-0965c66d86e0.png">
+<img width="545" alt="screen shot 2019-02-03 at 5 04 46 pm" src="https://user-images.githubusercontent.com/43815766/52177179-ad91aa00-27d6-11e9-899a-0529ee2b3de0.png">
 
 ## How to setup
 
