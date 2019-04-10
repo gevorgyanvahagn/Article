@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ArticlesViewController: UIViewController, APIClient {
+final class ArticlesViewController: UIViewController {
     
     private var tableViewHandler: TableViewHandler<ObjectArticle, ArticleCellBuilder>?
     private let cellBuilder = ArticleCellBuilder()
