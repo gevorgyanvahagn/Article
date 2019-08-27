@@ -15,10 +15,18 @@ class ArticleTests: XCTestCase {
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
 
     func testExample() {
+        XCTAssertEqual(10 / 2, 20 / 4)
+    }
+    
+    func testExample2() {
+        XCTAssertEqual(10 / 2, 20 / 4)
+    }
+    
+    func testExample3() {
         XCTAssertEqual(10 / 2, 20 / 4)
     }
 }
