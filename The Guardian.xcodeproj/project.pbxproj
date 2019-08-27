@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,6 +51,7 @@
 		737A194021D9703F00AAD103 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A193F21D9703F00AAD103 /* TagCollectionViewCell.swift */; };
 		737A194221D973E000AAD103 /* UICollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A194121D973E000AAD103 /* UICollectionViewLayoutAttributes.swift */; };
 		737A194421D9740400AAD103 /* UICollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A194321D9740400AAD103 /* UICollectionViewLeftAlignedLayout.swift */; };
+		73849B312315C19200C3434A /* ArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73849B302315C19200C3434A /* ArticleTests.swift */; };
 		73A2431521DA5640001D1104 /* CellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431421DA5640001D1104 /* CellBuilder.swift */; };
 		73A2431721DA6B55001D1104 /* TagCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431621DA6B55001D1104 /* TagCellBuilder.swift */; };
 		73A2431921DA8FB6001D1104 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2431821DA8FB6001D1104 /* UILabelExtension.swift */; };
@@ -63,6 +64,16 @@
 		73D2983C21D8CBFB009E4925 /* ArticlesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983B21D8CBFB009E4925 /* ArticlesResponse.swift */; };
 		73D2983E21D8CE87009E4925 /* ArticleFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983D21D8CE87009E4925 /* ArticleFields.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73849B332315C19200C3434A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 734EE91521D81BD20030535D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 734EE91C21D81BD20030535D;
+			remoteInfo = "The Guardian";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2741EE3540E3F2138E1DF69A /* Pods-The Guardian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Guardian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Guardian/Pods-The Guardian.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +123,9 @@
 		737A193F21D9703F00AAD103 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		737A194121D973E000AAD103 /* UICollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		737A194321D9740400AAD103 /* UICollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
+		73849B2E2315C19100C3434A /* ArticleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArticleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73849B302315C19200C3434A /* ArticleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTests.swift; sourceTree = "<group>"; };
+		73849B322315C19200C3434A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73A2431421DA5640001D1104 /* CellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBuilder.swift; sourceTree = "<group>"; };
 		73A2431621DA6B55001D1104 /* TagCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCellBuilder.swift; sourceTree = "<group>"; };
 		73A2431821DA8FB6001D1104 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
@@ -132,6 +146,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D0DBBECF4CD9A48588F578 /* Pods_The_Guardian.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73849B2B2315C19100C3434A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				734EE91F21D81BD20030535D /* The Guardian */,
+				73849B2F2315C19200C3434A /* ArticleTests */,
 				734EE91E21D81BD20030535D /* Products */,
 				7244F04B0E87D7D007102AE5 /* Pods */,
 				8362291FA19D34F3C219629D /* Frameworks */,
@@ -186,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				734EE91D21D81BD20030535D /* The Guardian.app */,
+				73849B2E2315C19100C3434A /* ArticleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -371,6 +394,15 @@
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
+		73849B2F2315C19200C3434A /* ArticleTests */ = {
+			isa = PBXGroup;
+			children = (
+				73849B302315C19200C3434A /* ArticleTests.swift */,
+				73849B322315C19200C3434A /* Info.plist */,
+			);
+			path = ArticleTests;
+			sourceTree = "<group>";
+		};
 		73A2431C21DBF667001D1104 /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,18 +465,40 @@
 			productReference = 734EE91D21D81BD20030535D /* The Guardian.app */;
 			productType = "com.apple.product-type.application";
 		};
+		73849B2D2315C19100C3434A /* ArticleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73849B372315C19200C3434A /* Build configuration list for PBXNativeTarget "ArticleTests" */;
+			buildPhases = (
+				73849B2A2315C19100C3434A /* Sources */,
+				73849B2B2315C19100C3434A /* Frameworks */,
+				73849B2C2315C19100C3434A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73849B342315C19200C3434A /* PBXTargetDependency */,
+			);
+			name = ArticleTests;
+			productName = ArticleTests;
+			productReference = 73849B2E2315C19100C3434A /* ArticleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		734EE91521D81BD20030535D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Vahagn Gevorgyan";
 				TargetAttributes = {
 					734EE91C21D81BD20030535D = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					73849B2D2315C19100C3434A = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 734EE91C21D81BD20030535D;
 					};
 				};
 			};
@@ -462,6 +516,7 @@
 			projectRoot = "";
 			targets = (
 				734EE91C21D81BD20030535D /* The Guardian */,
+				73849B2D2315C19100C3434A /* ArticleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -492,6 +547,13 @@
 				731DF07321D8EC7A00AE560A /* Marat Sans Light.otf in Resources */,
 				731DF06F21D8EC7A00AE560A /* Marat Sans ExtraLight Italic.otf in Resources */,
 				731DF06D21D8EC7A00AE560A /* Marat Sans ExtraBold Italic.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73849B2C2315C19100C3434A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,20 +588,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -585,7 +642,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		73849B2A2315C19100C3434A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73849B312315C19200C3434A /* ArticleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73849B342315C19200C3434A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 734EE91C21D81BD20030535D /* The Guardian */;
+			targetProxy = 73849B332315C19200C3434A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		734EE92421D81BD20030535D /* Main.storyboard */ = {
@@ -738,7 +811,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lightstudio.article;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -758,8 +831,50 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lightstudio.article;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		73849B352315C19200C3434A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZX3Z39GYL;
+				INFOPLIST_FILE = ArticleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lightstudio.ArticleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Guardian.app/The Guardian";
+			};
+			name = Debug;
+		};
+		73849B362315C19200C3434A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZX3Z39GYL;
+				INFOPLIST_FILE = ArticleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lightstudio.ArticleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Guardian.app/The Guardian";
 			};
 			name = Release;
 		};
@@ -780,6 +895,15 @@
 			buildConfigurations = (
 				734EE93021D81BD30030535D /* Debug */,
 				734EE93121D81BD30030535D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73849B372315C19200C3434A /* Build configuration list for PBXNativeTarget "ArticleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73849B352315C19200C3434A /* Debug */,
+				73849B362315C19200C3434A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
