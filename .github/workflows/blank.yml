@@ -6,15 +6,6 @@ jobs:
   build:
     runs-on: macOS-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
-      with:
-        fetch-depth: 1
-    - name: Set up ssh-agent
-      uses: yakuhzi/action-ssh-agent@v1
-      with:
-        public: ${{ secrets.SSH_PUBLIC_KEY }}
-        private: ${{ secrets.SSH_PRIVATE_KEY }}
     - uses: actions/checkout@v1
     - name: pod install
       run: pod install
