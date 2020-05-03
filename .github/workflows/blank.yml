@@ -6,6 +6,10 @@ jobs:
   build:
     runs-on: macOS-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@master
+      with:
+        fetch-depth: 1
     - name: Set up ssh-agent
       uses: yakuhzi/action-ssh-agent@v1
       with:
