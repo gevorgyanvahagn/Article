@@ -11,5 +11,4 @@ jobs:
       run: pod install
     - name: Run a multi-line script
       run: |
-        sudo xcode-select -switch /Applications/Xcode_11.app
         xcodebuild -project Application.xcodeproj -scheme Application -configuration Release -derivedDataPath $HOME/Application build
