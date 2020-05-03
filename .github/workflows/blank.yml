@@ -11,4 +11,4 @@ jobs:
       run: pod install
     - name: Run a multi-line script
       run: |
-        xcodebuild -project The Guardian.xcworkspace -scheme The Guardian -configuration Release -derivedDataPath $HOME/The Guardian build
+        xcodebuild -workspace The\ Guardian.xcworkspace -scheme The\ Guardian -configuration Release -derivedDataPath $HOME/The\ Guardian build
