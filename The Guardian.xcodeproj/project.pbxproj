@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -63,6 +63,7 @@
 		73D2983921D8BF23009E4925 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983821D8BF23009E4925 /* UIViewControllerExtension.swift */; };
 		73D2983C21D8CBFB009E4925 /* ArticlesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983B21D8CBFB009E4925 /* ArticlesResponse.swift */; };
 		73D2983E21D8CE87009E4925 /* ArticleFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983D21D8CE87009E4925 /* ArticleFields.swift */; };
+		83632726245F749D000C345E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 83632725245F749D000C345E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83632726245F749D000C345E /* Kingfisher in Frameworks */,
 				23D0DBBECF4CD9A48588F578 /* Pods_The_Guardian.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,13 +456,15 @@
 				734EE91921D81BD20030535D /* Sources */,
 				734EE91A21D81BD20030535D /* Frameworks */,
 				734EE91B21D81BD20030535D /* Resources */,
-				ED7276098EAEC8FB13E56214 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "The Guardian";
+			packageProductDependencies = (
+				83632725245F749D000C345E /* Kingfisher */,
+			);
 			productName = "The Guardian";
 			productReference = 734EE91D21D81BD20030535D /* The Guardian.app */;
 			productType = "com.apple.product-type.application";
@@ -511,6 +515,9 @@
 				Base,
 			);
 			mainGroup = 734EE91421D81BD20030535D;
+			packageReferences = (
+				83632724245F749D000C345E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 734EE91E21D81BD20030535D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -580,23 +587,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ED7276098EAEC8FB13E56214 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Guardian/Pods-The Guardian-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -909,6 +899,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		83632724245F749D000C345E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83632725245F749D000C345E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83632724245F749D000C345E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 734EE91521D81BD20030535D /* Project object */;
 }
