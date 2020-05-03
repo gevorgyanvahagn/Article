@@ -10,4 +10,6 @@ jobs:
     - name: pod install
       run: pod install
     - name: Run a multi-line script
-      run: fastlane tests
+      run: |
+        @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
+        fastlane tests
