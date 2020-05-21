@@ -7,7 +7,7 @@ jobs:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@v1
-    - name: pod install
+    - name: install pods
       run: pod install
     - name: Run a multi-line script
       run: |
