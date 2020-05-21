@@ -2,7 +2,11 @@ name: CI
 
 on: [push]
 
+    
+
 jobs:
+  - name: Fastlane Action
+    uses: maierj/fastlane-action@v1.4.0:
   build:
     runs-on: macOS-latest
     steps:
@@ -12,4 +16,6 @@ jobs:
       run: |
         for ip in $(dig @8.8.8.8 bitbucket.org +short); do ssh-keyscan bitbucket.org,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts || true 
         for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts || true
-        fastlane tests
+    - uses: maierj/fastlane-action@v1.4.0
+      with:
+        lane: 'tests'
