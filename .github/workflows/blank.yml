@@ -17,6 +17,5 @@ jobs:
         cat known_hosts
         for ip in $(dig @8.8.8.8 bitbucket.org +short); do ssh-keyscan bitbucket.org,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts || true 
         for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts || true
-    - uses: maierj/fastlane-action@v1.4.0
-      with:
-        lane: 'tests'
+    - name: Build
+      run: xcodebuild build -workspace The\ Guardian.xcworkspace -scheme The\ Guardian
