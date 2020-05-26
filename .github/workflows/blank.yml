@@ -10,11 +10,9 @@ jobs:
         uses: actions/checkout@master
         with:
           fetch-depth: 1
-      - name: Set up ssh-agent
-        uses: yakuhzi/action-ssh-agent@v1
+      - uses: webfactory/ssh-agent@v0.2.0
         with:
-          public: ${{ secrets.SSH_PUBLIC_KEY }}
-          private: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Build application
         run: |
           sudo xcode-select -switch /Applications/Xcode_11.app
