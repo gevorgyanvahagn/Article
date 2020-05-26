@@ -17,4 +17,4 @@ jobs:
       - name: Build application
         run: |
           sudo xcode-select -switch /Applications/Xcode_11.app
-          xcodebuild test -workspace 'The Guardian.xcworkspace' -scheme The\ Guardian -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.4.1'
+          xcodebuild test -workspace 'The Guardian.xcworkspace' -scheme The\ Guardian -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 11,OS=13'
