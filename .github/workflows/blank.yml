@@ -13,11 +13,11 @@ jobs:
     - name: Do Something strange
       run: |
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-    - name: Update known_hosts
-      run: |
-        cd ~/.ssh
-        ls
-        cat known_hosts
-        for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
+#     - name: Update known_hosts
+#       run: |
+#         cd ~/.ssh
+#         ls
+#         cat known_hosts
+#         for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
     - name: Build
       run: xcodebuild test -workspace 'The Guardian.xcworkspace' -scheme 'The Guardian' -configuration 'Debug' -destination 'platform=iOS Simulator,name=iPhone XS,OS=13'
