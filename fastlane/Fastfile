@@ -11,6 +11,8 @@ end
 platform :ios do
    desc "Runs all the tests"
    lane :slack_message do
+	puts "STUFF: #{ENV['API_TOKEN']}"
+      	puts "TEST KEY: #{ENV['TEST_KEY']}"
        slack(
            message: "App successfully uploaded to iTunesConnect.",
            success: true,
