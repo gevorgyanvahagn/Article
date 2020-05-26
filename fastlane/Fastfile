@@ -16,7 +16,7 @@ platform :ios do
        slack(
            message: "App successfully uploaded to iTunesConnect.",
            success: true,
-           slack_url: "#{ENV['SLACK_INCOMING_WEBHOOK']"
+           slack_url: "#{ENV['SLACK_INCOMING_WEBHOOK']}"
        )
    end
 end
