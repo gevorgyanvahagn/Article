@@ -15,7 +15,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 #       - run: pod install
       - run: for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
-      - run: cd fastlane; touch .env; echo e "API_TOKEN=${{ secrets.SSH_PRIVATE_KEY }}\nSLACK_INCOMING_WEBHOOK=${{ secrets.SLACK_INCOMING_WEBHOOK }}" >> .env  
+      - run: cd fastlane; touch .env; echo -e "API_TOKEN=${{ secrets.SSH_PRIVATE_KEY }}\nSLACK_INCOMING_WEBHOOK=${{ secrets.SLACK_INCOMING_WEBHOOK }}" >> .env  
       - name: Build application
         run: fastlane slack_message
       - run: fastlane test
