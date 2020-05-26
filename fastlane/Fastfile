@@ -8,3 +8,14 @@ platform :ios do
     end
 end
 
+platform :ios do
+   desc "Runs all the tests"
+   lane :slack_message do
+       slack(
+           message: "App successfully uploaded to iTunesConnect.",
+           success: true,
+           slack_url: "#{ENV['SLACK_INCOMING_WEBHOOK']"
+       )
+   end
+end
+
