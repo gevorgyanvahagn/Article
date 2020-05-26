@@ -23,6 +23,9 @@ final class ArticlesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(a)
+        print(b)
+        
         extendedLayoutIncludesOpaqueBars = true
         configureTableView()
         articlesLoader.showError = { [weak self] (error) in
