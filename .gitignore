@@ -66,7 +66,7 @@ fastlane/test_output
 # Others
 .DS_Store
 .idea/
-ENV.swift
+The\ Guardian/Application/Shared\ Files/Environment.swift
 env-vars.sh
 fastlane/.env
 
