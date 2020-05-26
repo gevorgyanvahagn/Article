@@ -10,6 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: pod install
+    - run: git clone https://github.com/onevcat/Kingfisher.git
     - name: Update known_hosts
       run: |
         cd ~/.ssh
