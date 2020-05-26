@@ -15,9 +15,10 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 #       - run: pod install
       - run: for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
-      - run: cd fastlane; touch .env; echo "API_TOKEN=${{ secrets.SSH_PRIVATE_KEY }}" >> .env  
+      - run: cd fastlane; touch .env; echo e "API_TOKEN=${{ secrets.SSH_PRIVATE_KEY }}/SLACK_INCOMING_WEBHOOK=${{ secrets.SLACK_INCOMING_WEBHOOK }}" >> .env  
       - name: Build application
-        run: fastlane tests
+        run: fastlane slack_message
+      - run: fastlane test
 #         run: |
 #           sudo xcode-select -switch /Applications/Xcode_11.app
 #           xcodebuild test -workspace 'The Guardian.xcworkspace' -scheme The\ Guardian -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 11,OS=13'
