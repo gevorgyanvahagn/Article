@@ -13,7 +13,7 @@ jobs:
     - name: Do Something strange
       run: |
           for FILE in $(grep -Ril "https://github.com/onevcat/Kingfisher.git" .); do
-          sed -i '' "s/https:\/\/github.com\/onevcat/Kingfisher.git/https:\/\/${GITHUB_PAT}@github.com\/onevcat/Kingfisher.git/g" ${FILE}
+          sed -i '' "s/https:\/\/github.com\/onevcat/Kingfisher.git/https:\/\/${AAAA_AAAA}@github.com\/onevcat/Kingfisher.git/g" ${FILE}
           done
     - name: Update known_hosts
       run: |
