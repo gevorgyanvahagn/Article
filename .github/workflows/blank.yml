@@ -1,14 +1,22 @@
 name: CI
 
 on: [push]
-
 jobs:
   build:
+    name: Release
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v1
-    - run: pod install
-    - name: Update known_hosts
-      run: |
-        for ip in $(dig @8.8.8.8 bitbucket.org +short); do ssh-keyscan bitbucket.org,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts || true 
-        for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts || true
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+      - uses: webfactory/ssh-agent@v0.2.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - run: pod install
+      - run: for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
+      - name: Build application
+        run: fastlane tests
+#         run: |
+#           sudo xcode-select -switch /Applications/Xcode_11.app
+#           xcodebuild test -workspace 'The Guardian.xcworkspace' -scheme The\ Guardian -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 11,OS=13'
