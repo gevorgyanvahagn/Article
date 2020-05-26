@@ -15,6 +15,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - run: for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
       - name: Build application
-        run: |
-          sudo xcode-select -switch /Applications/Xcode_11.app
-          xcodebuild test -workspace 'The Guardian.xcworkspace' -scheme The\ Guardian -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 11,OS=13'
+        run: fastlane tests
+#         run: |
+#           sudo xcode-select -switch /Applications/Xcode_11.app
+#           xcodebuild test -workspace 'The Guardian.xcworkspace' -scheme The\ Guardian -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 11,OS=13'
