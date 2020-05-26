@@ -63,7 +63,7 @@
 		73D2983C21D8CBFB009E4925 /* ArticlesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983B21D8CBFB009E4925 /* ArticlesResponse.swift */; };
 		73D2983E21D8CE87009E4925 /* ArticleFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2983D21D8CE87009E4925 /* ArticleFields.swift */; };
 		832A8D53247DB36D00D1243E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A8D52247DB36D00D1243E /* Environment.swift */; };
-		832A8D57247DC01300D1243E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A8D56247DC01300D1243E /* Constants.swift */; };
+		832A8D59247DC4B300D1243E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A8D58247DC4B300D1243E /* Constants.swift */; };
 		83632729245F80ED000C345E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 83632728245F80ED000C345E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -139,7 +139,7 @@
 		73D2983B21D8CBFB009E4925 /* ArticlesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesResponse.swift; sourceTree = "<group>"; };
 		73D2983D21D8CE87009E4925 /* ArticleFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFields.swift; sourceTree = "<group>"; };
 		832A8D52247DB36D00D1243E /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		832A8D56247DC01300D1243E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		832A8D58247DC4B300D1243E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A8A3CF33A93F698CBAD1C52D /* Pods_The_Guardian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Guardian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -305,7 +305,7 @@
 			children = (
 				832A8D52247DB36D00D1243E /* Environment.swift */,
 				734EE92021D81BD20030535D /* AppDelegate.swift */,
-				832A8D56247DC01300D1243E /* Constants.swift */,
+				832A8D58247DC4B300D1243E /* Constants.swift */,
 			);
 			path = "Shared Files";
 			sourceTree = "<group>";
@@ -600,7 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				734EE94821D821FA0030535D /* Endpoint.swift in Sources */,
-				832A8D57247DC01300D1243E /* Constants.swift in Sources */,
+				832A8D59247DC4B300D1243E /* Constants.swift in Sources */,
 				737A193821D96E2C00AAD103 /* CollectionViewHandler.swift in Sources */,
 				73D2983421D8BEDE009E4925 /* NSObjectExtension.swift in Sources */,
 				731DF07A21D8F4A100AE560A /* DateFormatterExtension.swift in Sources */,
