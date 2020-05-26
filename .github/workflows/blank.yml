@@ -1,9 +1,6 @@
 name: CI
 
 on: [push]
-
-    
-
 jobs:
   build:
     name: Release
@@ -14,10 +11,13 @@ jobs:
         with:
           fetch-depth: 1
       - name: Set up ssh-agent
+        env:
+            SUPER_SECRET1: ${{ secrets.SSH_PUBLIC_KEY }}
+            SUPER_SECRET2: ${{ secrets.SSH_PRIVATE_KEY }}
         uses: yakuhzi/action-ssh-agent@v1
         with:
-          public: ${{ secrets.SSH_PUBLIC_KEY }}
-          private: ${{ secrets.SSH_PRIVATE_KEY }}
+          public: SUPER_SECRET1
+          private: SUPER_SECRET2
       - name: Build application
         run: |
           sudo xcode-select -switch /Applications/Xcode_11.app
