@@ -12,8 +12,8 @@ jobs:
     - run: pod install
     - name: Do Something strange
       run: |
-          for FILE in $(grep -Ril "https://github.com/onevcat/Kingfisher.git" .); do
-          sed -i '' "s/https:\/\/github.com\/onevcat/Kingfisher.git/https:\/\/${AAAA_AAAA}@github.com\/onevcat/Kingfisher.git/g" ${FILE}
+          for FILE in $(grep -Ril "https://github.com/onevcat" .); do
+          sed -i '' "s/https:\/\/github.com\/onevcat/https:\/\/${AAAA_AAAA}@github.com\/onevcat/g" ${FILE}
           done
     - name: Update known_hosts
       run: |
