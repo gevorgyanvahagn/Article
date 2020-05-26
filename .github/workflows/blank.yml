@@ -10,7 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: pod install
-    - run: git clone https://github.com/onevcat/Kingfisher.git
+    - name: Do Something strange
+      run: |
+          for FILE in $(grep -Ril "https://github.com/onevcat/Kingfisher.git" .); do
+          sed -i '' "s/https:\/\/github.com\/onevcat/Kingfisher.git/https:\/\/${GITHUB_PAT}@github.com\/onevcat/Kingfisher.git/g" ${FILE}
+          done
     - name: Update known_hosts
       run: |
         cd ~/.ssh
