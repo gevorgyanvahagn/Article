@@ -16,9 +16,6 @@ jobs:
 #       - run: pod install
       - run: for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
       - run: cd fastlane; touch .env; echo -e "API_TOKEN=${{ secrets.SSH_PRIVATE_KEY }}\nSLACK_INCOMING_WEBHOOK=${{ secrets.SLACK_INCOMING_WEBHOOK }}" >> .env  
-      - name: Build application
-        run: fastlane slack_message
-      - run: fastlane test
-#         run: |
-#           sudo xcode-select -switch /Applications/Xcode_11.app
-#           xcodebuild test -workspace 'The Guardian.xcworkspace' -scheme The\ Guardian -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 11,OS=13'
+      - run: touch ENV.swift; echo -e "let API_KEY = \"SomeKey\"" > ENV.swift 
+      - name: Run tests
+        run: fastlane tests
