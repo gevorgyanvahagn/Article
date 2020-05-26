@@ -66,6 +66,9 @@ fastlane/test_output
 # Others
 .DS_Store
 .idea/
+ENV.swift
+env-vars.sh
+fastlane/.env
 
 
 ### Firebase ###
