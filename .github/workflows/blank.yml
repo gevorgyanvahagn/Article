@@ -12,9 +12,7 @@ jobs:
     - run: pod install
     - name: Do Something strange
       run: |
-          for FILE in $(grep -Ril "https://github.com/onevcat" .); do
-          sed -i '' "s/https:\/\/github.com\/onevcat/https:\/\/${AAAA_AAAA}@github.com\/onevcat/g" ${FILE}
-          done
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
     - name: Update known_hosts
       run: |
         cd ~/.ssh
