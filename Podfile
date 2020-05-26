@@ -1,6 +1,6 @@
 platform :ios, '12.0'
 
-target 'The Guardian' do
+target 'Article' do
   use_frameworks!
 
 end
