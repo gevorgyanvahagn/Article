@@ -6,18 +6,19 @@ on: [push]
 
 jobs:
   build:
+    name: Release
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v1
-    - run: pod install
-    - name: Do Something strange
-      run: |
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-#     - name: Update known_hosts
-#       run: |
-#         cd ~/.ssh
-#         ls
-#         cat known_hosts
-#         for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
-    - name: Build
-      run: xcodebuild test -workspace 'The Guardian.xcworkspace' -scheme 'The Guardian' -configuration 'Debug' -destination 'platform=iOS Simulator,name=iPhone XS,OS=13'
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+      - name: Set up ssh-agent
+        uses: yakuhzi/action-ssh-agent@v1
+        with:
+          public: ${{ secrets.SSH_PUBLIC_KEY }}
+          private: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Build application
+        run: |
+          sudo xcode-select -switch /Applications/Xcode_11.app
+          xcodebuild -workspace 'The Guardian.xcworkspace' -scheme The\ Guardian -configuration Debug -derivedDataPath $HOME/The\ Guardian build
