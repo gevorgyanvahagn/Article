@@ -16,6 +16,7 @@ jobs:
       - run: pod install
       - run: for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
       - run: cd fastlane; touch .env; echo -e "API_TOKEN=${{ secrets.SSH_PRIVATE_KEY }}\nSLACK_INCOMING_WEBHOOK=${{ secrets.SLACK_INCOMING_WEBHOOK }}" >> .env  
-      - run: touch ENV.swift; echo -e "let API_KEY = \"SomeKey\"" > ENV.swift 
+      - run: touch The\ Guardian/Application/Shared\ Files/Environment.swift
+      - run: echo -e "let API_KEY = \"${{ secrets.API_KEY }}\"" > The\ Guardian/Application/Shared\ Files/Environment.swift 
       - name: Run tests
         run: fastlane tests
