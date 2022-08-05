@@ -52,8 +52,4 @@ final class ArticlesViewController: UIViewController {
             }
         }
     }
-    
-    deinit {
-        print("ArticlesViewController deinit")
-    }
 }
