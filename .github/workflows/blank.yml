@@ -1,4 +1,4 @@
-name: CI
+name: build
 
 on:
   push:
@@ -10,23 +10,14 @@ on:
         options:
         - dev
         - staging
-  
+
 jobs:
   build:
-    name: Release
+    name: Deploy
     runs-on: macOS-latest
+      
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 1
-      - uses: webfactory/ssh-agent@v0.2.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - run: pod install
-      - run: for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
-      - run: cd fastlane; touch .env; echo -e "API_TOKEN=${{ secrets.SSH_PRIVATE_KEY }}\nSLACK_INCOMING_WEBHOOK=${{ secrets.SLACK_INCOMING_WEBHOOK }}" >> .env  
-      - run: touch Article/Application/SharedFiles/Environment.swift
-      - run: echo -e "let API_KEY = \"${{ secrets.API_KEY }}\"" > Article/Application/SharedFiles/Environment.swift 
-      - name: Run tests
-        run: fastlane tests
+    
+      - name: Print selected choice
+        run: |
+          echo "choice is ${{ github.event.inputs.choice }}" / ${{ inputs.choice }}
