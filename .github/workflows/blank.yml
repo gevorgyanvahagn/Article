@@ -6,8 +6,7 @@ on:
     inputs:
       choice:
         type: Configuration
-        description: Please select build configuration
-        default: dev
+        description: Please select the build configuration
         options:
         - dev
         - staging
