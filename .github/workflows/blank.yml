@@ -3,6 +3,14 @@ name: CI
 on:
   push:
   workflow_dispatch:
+    inputs:
+      choice:
+        type: Configuration
+        description: Please select build configuration
+        default: dev
+        options:
+        - dev
+        - staging
   
 jobs:
   build:
