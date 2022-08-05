@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       choice:
-        type: Configuration
+        type: choice
         description: Please select the build configuration
         options:
         - dev
