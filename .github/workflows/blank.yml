@@ -22,4 +22,4 @@ jobs:
 
       - name: Run staging action
         if: ${{ github.event.inputs.choice == 'staging' }}
-        run: echo "dev build"
+        run: echo "staging build"
