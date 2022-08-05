@@ -14,6 +14,6 @@ struct Constants {
     }
     
     struct Keys {
-        static let APIKey = API_KEY
+        static let APIKey = "API_KEY"
     }
 }
