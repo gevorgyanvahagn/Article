@@ -1,5 +1,3 @@
-name: build
-
 on:
   pull_request:
   workflow_dispatch:
@@ -18,6 +16,10 @@ jobs:
       
     steps:
     
-      - name: Print selected choice
-        run: |
-          echo "choice is ${{ github.event.inputs.choice }}" / ${{ inputs.choice }}
+      - name: Run dev action
+        if: ${{ (github.event.inputs.choice == '') || (github.event.inputs.choice == 'dev') }}
+        run: echo "dev build"
+
+      - name: Run staging action
+        if: ${{ github.event.inputs.choice == 'staging' }}
+        run: echo "dev build"
